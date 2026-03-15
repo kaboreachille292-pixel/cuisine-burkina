@@ -1,0 +1,52 @@
+════════════════════════════════════════════════════════════════
+  MODIFICATION : lib/screens/home_screen.dart  (UNE SEULE LIGNE)
+════════════════════════════════════════════════════════════════
+
+Dans home_screen.dart, trouvez cette ligne (environ ligne 19) :
+
+    AVANT :
+    ───────
+    final featured = RecipeData.getRecipes().take(4).toList();
+
+    APRÈS (remplacez-la par) :
+    ──────────────────────────
+    final featured = RecipeData.getFeatured();
+
+C'est tout ! Aucune autre modification dans home_screen.dart.
+
+════════════════════════════════════════════════════════════════
+  PHOTOS À AJOUTER dans  assets/images/
+════════════════════════════════════════════════════════════════
+
+Ajoutez ces 4 images dans le dossier  assets/images/  de votre projet :
+
+  → assets/images/benga.jpg                 (Benga Riz-Haricot)
+  → assets/images/jus_gingembre.jpg         (Jus de Gingembre)
+  → assets/images/sauce_feuilles_baobab.jpg (Sauce Feuilles de Baobab)
+  → assets/images/koura_koura.jpg           (Koura-Koura Biscuits)
+
+Si une photo est absente → icône automatique ✅  (aucun crash)
+
+════════════════════════════════════════════════════════════════
+  RÉSUMÉ COMPLET DES 4 FICHIERS À MODIFIER / COPIER
+════════════════════════════════════════════════════════════════
+
+  1. lib/screens/dictionary_screen.dart
+     → COPIER le nouveau fichier  (Dictionnaire Moore/Dioula/Fulfuldé)
+
+  2. lib/screens/main_navigation.dart
+     → REMPLACER entièremenmt  (ajoute l'onglet 📖 Dico)
+
+  3. lib/models/recipe_data.dart
+     → INSÉRER PARTIE 1 juste après :  static const List<Recipe> _recipes = [
+     → INSÉRER PARTIE 2 juste après :  static List<Recipe> getRecipes() => _recipes;
+
+  4. lib/screens/home_screen.dart
+     → CHANGER UNE LIGNE (voir ci-dessus)
+
+════════════════════════════════════════════════════════════════
+  RELANCER L'APP
+════════════════════════════════════════════════════════════════
+
+  flutter pub get
+  flutter run

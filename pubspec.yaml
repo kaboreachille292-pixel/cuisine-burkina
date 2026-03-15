@@ -1,0 +1,29 @@
+name: cuisine_burkina
+description: Application de recettes de cuisine burkinabè
+
+publish_to: 'none'
+version: 3.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.jpg"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
